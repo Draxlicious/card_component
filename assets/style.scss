@@ -1,0 +1,155 @@
+$BGColor: hsl(217, 54%, 11%);
+$CardBG:hsl(216, 50%, 16%);
+$line:hsl(215, 32%, 27%);
+$White: hsl(0, 0%, 100%);
+
+$Soft: hsl(215, 51%, 70%);
+$Cyan: hsl(178, 100%, 50%);
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
+    html{
+        font-family: 'Outfit', sans-serif;
+    }
+    
+    body {
+        background-color: $BGColor;
+        margin: 0;
+    }
+
+    p{
+        font-size: 18px;
+    }
+
+    #card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding:1em;
+        background-color: hsl(216, 50%, 16%);
+        border-radius: 25px;
+        margin:2em;
+    }
+
+    .inner-card{
+        padding:0.5em;
+        background-color: $CardBG;
+    }
+    
+    .flex{
+        display:flex;
+        align-items: center;
+    }
+
+    h1{
+        color: $White;
+    }
+
+    p {
+        color:$Soft;
+    }
+
+    span {
+        color: $Cyan;
+    }
+
+    figure{
+        margin:0;
+    }
+
+    .main-img{
+        width: 100%;
+        min-height: 250px;
+        max-height: 440px;
+        min-width: 230px;
+        border-radius: 12px;
+    }
+
+    hr{
+        background-color: $line;
+        border: none;
+        height: 1px;
+        margin-bottom:1em;
+    }
+
+    .ETH-container{
+        justify-content: space-between;
+    }
+
+    .ETH-money{
+        color:$Cyan;
+        margin-left:0.5em;
+    }
+
+    .icon-ethereum{
+        height:25px;
+        width: 15px;
+    }
+
+    .avatar-logo{
+        width: 40px;
+        height:40px;
+        border: 1px solid $White;
+        border-radius: 25px;
+        margin-right: 1em;
+    }
+    .icon-clock{
+        height:25px;
+        width: 25px;
+        margin:0 0.5em;
+    }
+
+    span{
+        color: $White;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    .image-card{
+        position: relative;
+        cursor: pointer;
+    }
+
+    .image-card:hover:before{
+        content: "";
+        position: absolute;
+        inset:0;
+        background-color: $Cyan;
+        opacity: 0.7;
+        border-radius: 24px;
+    }
+
+    .image-card:hover:after{
+        content: url("/images/icon-view.svg");
+        position: absolute;
+        height:25px;
+        width:25px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    
+
+    @media only screen and (min-width: 601px) {
+
+        #card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding:1em;
+            background-color: hsl(216, 50%, 16%);
+            border-radius: 25px;
+            margin: 0 auto;
+            width: 450px;
+            margin-top:5em;
+        }
+    
+        .inner-card{
+            padding:0.5em;
+            background-color: $CardBG;
+        }
+      }
