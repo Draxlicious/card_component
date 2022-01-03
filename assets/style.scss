@@ -60,9 +60,9 @@ $Cyan: hsl(178, 100%, 50%);
 
     .main-img{
         width: 100%;
-        min-height: 250px;
-        max-height: 440px;
-        min-width: 230px;
+        min-height: 15.625em;
+        max-height: 27.5em;
+        min-width: 14.375em;
         border-radius: 12px;
     }
 
@@ -112,6 +112,7 @@ $Cyan: hsl(178, 100%, 50%);
         position: relative;
         cursor: pointer;
     }
+
 
     .image-card:hover:before{
         content: "";
