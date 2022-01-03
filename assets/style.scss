@@ -114,7 +114,7 @@ $Cyan: hsl(178, 100%, 50%);
     }
 
 
-    .image-card:hover:before{
+    .image-card:hover::before{
         content: "";
         position: absolute;
         inset:0;
@@ -123,7 +123,7 @@ $Cyan: hsl(178, 100%, 50%);
         border-radius: 24px;
     }
 
-    .image-card:hover:after{
+    .image-card:hover::after{
         content: url("/images/icon-view.svg");
         position: absolute;
         height:25px;
@@ -131,6 +131,28 @@ $Cyan: hsl(178, 100%, 50%);
         top:50%;
         left:50%;
         transform: translate(-50%, -50%);
+    }
+
+    // new hover effect
+    .image-eye{
+        background-image: url("/images/icon-view.svg");
+        position: absolute;
+        background-repeat: no-repeat;
+        height:40px;
+        width:50px;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        display: none;
+    }
+
+    .image-background{
+        position: absolute;
+        inset:0;
+        background-color: $Cyan;
+        opacity: 0.7;
+        border-radius: 24px;
+        display: none;
     }
     
 
@@ -145,7 +167,7 @@ $Cyan: hsl(178, 100%, 50%);
             background-color: hsl(216, 50%, 16%);
             border-radius: 25px;
             margin: 0 auto;
-            width: 450px;
+            width: 20em;
             margin-top:5em;
         }
     

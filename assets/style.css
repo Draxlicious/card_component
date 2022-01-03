@@ -120,7 +120,7 @@ a {
   cursor: pointer;
 }
 
-.image-card:hover:before {
+.image-card:hover::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -129,7 +129,7 @@ a {
   border-radius: 24px;
 }
 
-.image-card:hover:after {
+.image-card:hover::after {
   content: url("/images/icon-view.svg");
   position: absolute;
   height: 25px;
@@ -138,6 +138,28 @@ a {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+.image-eye {
+  background-image: url("/images/icon-view.svg");
+  position: absolute;
+  background-repeat: no-repeat;
+  height: 40px;
+  width: 50px;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  display: none;
+}
+
+.image-background {
+  position: absolute;
+  inset: 0;
+  background-color: #00fff7;
+  opacity: 0.7;
+  border-radius: 24px;
+  display: none;
 }
 
 @media only screen and (min-width: 601px) {
@@ -159,7 +181,7 @@ a {
     background-color: #14253d;
     border-radius: 25px;
     margin: 0 auto;
-    width: 450px;
+    width: 20em;
     margin-top: 5em;
   }
   .inner-card {
